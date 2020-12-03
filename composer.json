@@ -15,7 +15,7 @@
             "email": "trilobyte.my@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "omnipay/common": "^3.0.0",
         "php-http/guzzle6-adapter": "^2.0"
