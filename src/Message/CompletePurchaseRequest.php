@@ -4,7 +4,7 @@ namespace Omnipay\IPay88\Message;
 
 class CompletePurchaseRequest extends AbstractRequest
 {
-    protected $endpoint = 'https://payment.ipay88.com.my/epayment/entry.asp';
+    protected $endpoint = 'https://payment.ipay88.com.my/epayment/enquiry.asp';
 
     public function getData()
     {
