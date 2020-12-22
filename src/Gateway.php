@@ -22,7 +22,7 @@ class Gateway extends AbstractGateway
         return [
             'merchantKey' => '',
             'merchantCode' => '',
-            'backendUrl' => ''
+            'backendUrl' => '',
         ];
     }
 
