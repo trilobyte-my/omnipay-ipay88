@@ -17,13 +17,15 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "omnipay/common": "^3.0.0",
-        "php-http/guzzle6-adapter": "^1.1"
+        "omnipay/common": "v3.2.0",
+        "php-http/guzzle6-adapter": "v2.0.2"
     },
     "require-dev": {
-        "omnipay/tests": "^3.0.0"
+        "omnipay/tests": "v4.1.2"
     },
     "autoload": {
-        "psr-4": { "Omnipay\\IPay88\\" : "src/" }
+        "psr-4": {
+            "Omnipay\\IPay88\\": "src/"
+        }
     }
 }
