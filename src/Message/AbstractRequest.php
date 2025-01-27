@@ -47,9 +47,9 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         );
     }
 
-    protected function createSignatureFromString($fullStringToHash)
+    protected function createSignatureFromString($fullStringToHash,$merchantKey)
     {
-        return hash('sha256', $fullStringToHash);
+        return hash_hmac('sha512', $fullStringToHash,$merchantKey);
     }
 
     // private function hex2bin($hexSource)
