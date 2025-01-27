@@ -45,6 +45,6 @@ class CompletePurchaseRequest extends AbstractRequest
 
         $paramsInArray = [$merchantKey, $merchantCode, $paymentId, $refNo, $amount, $currency, $status];
 
-        return $this->createSignatureFromString(implode('', $paramsInArray));
+        return $this->createSignatureFromString(implode('', $paramsInArray),$merchantKey);
     }
 }
