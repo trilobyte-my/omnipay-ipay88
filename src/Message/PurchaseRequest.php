@@ -20,7 +20,7 @@ class PurchaseRequest extends AbstractRequest
             'UserContact' => $this->getCard()->getNumber(),
             'Remark' => '',
             'Lang' => '',
-            'SignatureType' => 'SHA256',
+            'SignatureType' => 'HMAC-SHA512',
             'Signature' => $this->signature(
                 $this->getMerchantKey(),
                 $this->getMerchantCode(),
@@ -44,7 +44,6 @@ class PurchaseRequest extends AbstractRequest
 
         $paramsInArray = [$merchantKey, $merchantCode, $refNo, $amount, $currency];
 
-        return $this->createSignatureFromString(implode('', $paramsInArray));
+        return $this->createSignatureFromString(implode('', $paramsInArray), $merchantKey);
     }
-
 }
